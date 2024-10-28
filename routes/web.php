@@ -51,6 +51,8 @@ Route::group(['middleware' => 'role:admin'], function () {
     Route::post('/forms/{form}/reply', [FormController::class, 'reply'])->name('forms.reply');
 });
 
+
+
 // Route Group สำหรับ User
 Route::group(['middleware' => 'role:user'], function () {
     Route::get('/userAccount', [FormController::class, 'userAccount'])->name('userAccount');
