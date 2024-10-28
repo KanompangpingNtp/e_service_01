@@ -23,14 +23,6 @@
         <input type="hidden" id="month" name="month" value="{{ old('month', $form->month) }}">
         <input type="hidden" id="year" name="year" value="{{ old('year', $form->year) }}">
 
-
-        <div class="row">
-            <div class="mb-3 col-md-3">
-                <label for="writeAt" class="form-label">เขียนที่ <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="writeAt" name="writeAt" value="{{ old('writeAt', $form->location) }}" placeholder="โปรดระบุ" required>
-            </div>
-        </div>
-
         @php
             // สร้างอาร์เรย์ชื่อเดือนในภาษาไทย
             $months = [
@@ -119,13 +111,21 @@
 
         <div class="row">
             <div class="mb-3 col-md-4">
-                <label for="complaintName" class="form-label">ชื่อเรื่องคำขอ</label>
+                <label for="complaintName" class="form-label">เรื่องที่ร้องเรียน</label>
                 <input type="text" class="form-control" id="complaintName" name="complaintName" value="{{ old('complaintName', $form->submission_name) }}" placeholder="โปรดระบุ" required>
             </div>
         </div>
-        <div class="col-md-7">
-            <label for="complaintDetails" class="form-label">ขอยื่นคำร้องต่อหน่วยงาน <span class="text-danger">*</span></label>
-            <textarea class="form-control" id="complaintDetails" name="complaintDetails" rows="3" placeholder="โปรดระบุ" required>{{ old('complaintDetails', $form->submission) }}</textarea>
+        <div class="row">
+            <div class="mb-3 col-md-3">
+                <label for="writeAt" class="form-label">สถานที่ร้องเรียน <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="writeAt" name="writeAt" value="{{ old('writeAt', $form->location) }}" placeholder="โปรดระบุ" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <label for="complaintDetails" class="form-label">ความประสงค์ของผู้ร้องเรียน ที่ต้องการให้แก้ไข <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="complaintDetails" name="complaintDetails" rows="3" placeholder="โปรดระบุ" required>{{ old('complaintDetails', $form->submission) }}</textarea>
+            </div>
         </div>
 
         <br>
@@ -144,7 +144,7 @@
             </div>
         </div> --}}
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-2 mb-3">
                 <label for="documentNumber" class="form-label">จำนวนเอกสาร</label>
                 <input type="number" class="form-control" id="documentNumber" name="documentNumber" placeholder="โปรดระบุ" required oninput="updateFileInputs()">
@@ -176,7 +176,7 @@
                     container.appendChild(fileInput);
                 }
             }
-        </script>
+        </script> --}}
 
         <br>
 

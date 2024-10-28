@@ -14,7 +14,7 @@
             margin-right: 40px; /* ระยะห่างจากขอบขวา */
         }
 
-        h4 {
+        h3 {
             text-align: center;
             margin-top: 0;
         }
@@ -258,7 +258,45 @@
 
 
     <div class="container">
-        <h4>แบบคำขอร้องทั่วไป</h4><br>
+        <h3>คําร้องแจ้งเหตุรับเรื่องรวร้องเรียนทั่วไป</h3>
+        <p style="margin-left: 320px;">วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p>
+
+        <p style="margin-top: 10px;"><b>เรื่อง</b>คําร้องแจ้งเหตุรับเรื่องราวร้องเรียนทั่วไป</p>
+        <p><b>เรียน</b>นายกเทศบาลเมืองต้นแบบ ๔.๐</p><br>
+
+        <p style="margin-left: 55px;">ข้าพเจ้า <span class="fullname">{{ $form->fullname }}</span> อาย <span class="age">{{ $form->age }}</span>ปี อาชีพ<span class="occupation">{{ $form->occupation }}</span></p>
+        <p>อยู่บ้านเลขที่<span class="house_no">{{ $form->house_no }}</span>หมู่ที่<span class="village_no">{{ $form->village_no }}</span>ตรอก/ซอย<span class="alley">{{ $form->alley }}</span></p>
+        <p>ถนน<span class="road">{{ $form->road }}</span>แขวง/ตำบล<span class="sub_district">{{ $form->sub_district }}</span>เขต/อำเภอ<span class="district">{{ $form->district }}</span></p>
+        <p>จังหวัด<span class="province">{{ $form->province }}</span>หมายเลขโทรศัพท์<span class="phone">{{ $form->phone }}</span> </p>
+
+        <p style="margin-left: 55px;">เรื่องที่ร้องเรียน<span class="submission_name">{{ $form->submission_name }}</span></p>
+        <p style="margin-left: 55px;">สถานที่ร้องเรียน<span class="location">{{ $form->location }}</span></p>
+
+        <p>อยู่บ้านเลขที่<span class="house_no">{{ $form->house_no }}</span>หมู่ที่<span class="village_no">{{ $form->village_no }}</span>ตรอก/ซอย<span class="alley">{{ $form->alley }}</span></p>
+        <p>ถนน<span class="road">{{ $form->road }}</span>แขวง/ตำบล<span class="sub_district">{{ $form->sub_district }}</span>เขต/อำเภอ<span class="district">{{ $form->district }}</span></p>
+        <p>จังหวัด<span class="province">{{ $form->province }}</span>หมายเลขโทรศัพท์<span class="phone">{{ $form->phone }}</span> </p>
+
+        <p style="margin-left: 55px;">เหตุเกิดเมื่อไร วันที่<span class="day">{{ $form->day }}</span>เดือน<span class="month">{{ $thaiMonth  }}</span>ปี<span class="year">{{ $thaiYear  }}</span></p></p>
+        <p style="margin-left: 55px;">ความประสงค์ของผู้ร้องเรียน ที่ต้องการแก้ไข<span class="submission">{{ $form->submission }}</span></p>
+        <p style="margin-left: 55px;">จึงเรียนมาเพื่อ พิจารณา</p>
+
+        <table style="width: 100%; margin-top: 10px;">
+            <tr>
+                <!-- คอลัมน์ซ้าย -->
+                <td style="width: 50%; vertical-align: top;">
+                </td>
+
+                <!-- คอลัมน์ขวา -->
+                <td style="width: 50%; vertical-align: top; text-align: center;">
+                    <p>ขอแสดงความนับถือ</p>
+                    <p>ลงชื่อ<span class="fullname">{{ $form->fullname }}</span>ผู้ยื่นคำร้อง</p>
+                    <p>(<span class="fullname">{{ $form->fullname }}</span>)</p>
+                </td>
+            </tr>
+        </table>
+
+
+        {{-- <h4>แบบคำขอร้องทั่วไป</h4><br>
 
         <p>หมายเลขคำร้องที่ ............. / .............</p>
 
@@ -323,7 +361,7 @@
                     <p>( ............................................................)</p>
                 </td>
             </tr>
-        </table>
+        </table> --}}
 
 
     </div>

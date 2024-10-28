@@ -19,11 +19,6 @@
         <input type="hidden" id="month" name="month">
         <input type="hidden" id="year" name="year">
 
-        <div class="mb-3 col-md-3">
-            <label for="writeAt" class="form-label">เขียนที่</label>
-            <input type="text" class="form-control" id="writeAt" name="writeAt" placeholder="โปรดระบุ" required>
-        </div>
-
         @php
         // สร้างอาร์เรย์ชื่อเดือนในภาษาไทย
             $months = [
@@ -112,17 +107,21 @@
         <br>
 
         <div class="mb-3 col-md-4">
-            <label for="complaintName" class="form-label">ชื่อเรื่องคำขอ</label>
+            <label for="complaintName" class="form-label">เรื่องที่ร้องเรียน</label>
             <input type="text" class="form-control" id="complaintName" name="complaintName" placeholder="โปรดระบุ" required>
         </div>
+        <div class="mb-3 col-md-4">
+            <label for="writeAt" class="form-label">สถานที่ร้องเรียน</label>
+            <input type="text" class="form-control" id="writeAt" name="writeAt" placeholder="โปรดระบุ" required>
+        </div>
         <div class="mb-3 col-md-7">
-            <label for="complaintDetails" class="form-label">ขอยื่นคำร้องต่อหน่วยงาน</label>
+            <label for="complaintDetails" class="form-label">ความประสงค์ของผู้ร้องเรียน ที่ต้องการให้แก้ไข</label>
             <textarea class="form-control" id="complaintDetails" name="complaintDetails" rows="3" placeholder="โปรดระบุ" required></textarea>
         </div>
 
         <br>
 
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-2 mb-3">
                 <label for="documentNumber" class="form-label">จำนวนเอกสาร</label>
                 <input type="number" class="form-control" id="documentNumber" name="documentNumber" placeholder="โปรดระบุ" required oninput="updateFileInputs()">
@@ -154,7 +153,7 @@
                     container.appendChild(fileInput);
                 }
             }
-        </script>
+        </script> --}}
 
         <br>
 
